@@ -1,0 +1,300 @@
+ /*
+caroline css farmework 
+develope by vikram somai
+website:vikramsomai.github.io
+version:;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap");
+:root{
+
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*{
+    list-style: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0.5rem;
+}
+p{
+    letter-spacing: 2px;
+    padding: 1rem;
+    word-spacing: 2px;
+}
+/* head   */
+.head{
+height: 80px;
+width: 100%;
+background: #FFF;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-shadow: 0 5px 20px 0 rgba(11,7,110,.04);
+}
+/*logo */
+.logo{
+padding-left:1.5rem;
+font-size:2rem;
+font-weight: 600;
+flex:1;
+}
+/*nav */
+.nav-bar{
+justify-content: center;
+flex:2;
+}
+.nav-bar ul li{
+    display: inline-block;
+    padding-left: 1rem;
+    font-size: 22px;
+     color: rgb(103, 110, 139);
+    font-weight: 400;
+    cursor:pointer;
+    text-transform: capitalize;
+}
+.row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width:100%;
+    flex-wrap: wrap;
+}
+.col{
+   //flex:1;
+   border:1px solid #CCC;
+   height: auto;
+}
+/* button style */
+.btn{
+    padding:8px;
+    margin:0.5rem;
+    font-size:18px;
+    outline: none;
+    border:none;
+    cursor:pointer;
+    font-weight: 300;
+    border-radius:4px;
+}
+.btn-primary{
+    color:#fff;
+    background: #00B4FF;
+}
+.btn-danger{
+    color:#fff;
+    background: red;
+}
+.btn-warning{
+    color:#fff;
+    background:#f0a500;
+}
+.btn-primary:active{
+    box-shadow: 0px 4px 10px 0px #00D7FF;
+}
+.btn-danger:hover{
+    box-shadow: 0px 4px 10px 0px #FF0042;
+}
+.link{
+    text-decoration: none;
+    display: block;
+    position: relative;
+    color: rgb(25,91,255);
+    transition: all .25s ease;
+}
+
+/* form style regular */
+form{
+    padding: 5px;
+    margin: 10px;
+}
+.input-box{
+    width:15rem;
+    height: auto;
+}
+label{
+    font-size: 18px;
+    font-weight: 400;
+    padding: 4px;
+    margin:10px;
+}
+.input{
+    padding:8px;
+    width: 100%;
+    font-size: 18px;
+    margin:0.5rem;
+    outline:none;
+    border:2px solid transparent;
+    background: rgb(240,243,244);
+    border-radius:14px;
+    overflow:hidden;
+    transition: all .25s ease;
+}
+.input:hover
+{
+    border:2px solid rgba(0,0,0,.1);
+}
+.input:focus{
+    border:2px solid rgb(25,91,255);
+    padding-left: 15px;
+    padding-right: 5px;
+}
+.error{
+    margin-left:0.8rem;
+     color:#495057;
+     padding: 0.1rem;
+}
+.dropdown{
+    border:1px solid #CCC;
+    padding:6px;
+    margin: 0.5rem;
+    font-size: 18px;
+    width:100%;
+    border-radius: 4px;
+}
+.dropdown-option, option{
+    height: 60px;
+    padding: 6px;
+    margin: 10px;
+}
+/*checkbox */
+.checkbox{
+    border:0.5px solid #FFf;
+   padding: 10px;
+}
+/* footer */
+
+/*custom ads banner */
+.ads-contain{
+    margin-left:15%;
+    margin-right:15%;
+   background-color: rgba(241,241,241,.5);
+    height: 250px;
+    border:0.5px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+/*container  */
+.box{
+    border-radius: 5px;
+    border:1px solid #CCC;
+    height: auto;
+    width:30%;
+    padding: 1rem;
+    margin:2rem;
+}
+.code{
+    overflow:hidden;
+    background: #000;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 1rem;
+}
+.contain{
+    border: 0.5px solid #ccc;
+    flex:2;
+
+    margin-left: 8%;
+    margin-right: 4%;
+    padding: 10px;
+    height: 200px;
+}
+.sidebar{
+    flex:1;
+    height: 100px;
+    padding: 10px;
+    margin-right: 10%;
+    border: 0.5px solid #ccc;
+}
+
+/* end layout */
+
+/*search button   */
+.search-box{
+    padding:10px;
+    margin:1rem;
+    width:25rem;
+    border-radius:10px;
+    border:none;
+    color:#000;
+    background:#e0ece4;
+    font-size: 18px;
+    font-weight: 300;
+    outline: none;
+}
+
+
+/*card design  */
+
+/*table  css */
+.table{
+    border-radius: 15px;
+    border-collapse: collapse;
+    box-shadow: 0px 5px 20px 0px rgba(0,0,0,.05);
+    width:90%;
+    max-width: 100%;
+    overflow: hidden;
+    font-size:1rem;
+    margin: 1rem;
+}
+.table th{
+   padding: 10px 15px;
+   text-align: left;
+   background: rgb(244,247,248);
+   color:rgba(0,0,0,.6);
+   font-weight: 500;
+}
+
+.table td{
+  padding: 12px 15px;
+}
+.table tr
+{
+    transition: all .25s ease;
+    color:rgba(0,0,0,.6);
+    cursor: pointer;
+}
+.table tr:hover{
+    background: rgba(25,91,255,.1);
+    color:rgb(25,91,255);
+}
+/*end table */
+
+@media(max-width: 768px)/*mobile device*/ 
+{
+ .nav-bar{
+    position: absolute;
+    width: 100%;
+    top:18%;
+    background: #FFF;
+    }
+    .nav-bar ul {
+    background:#FFF;
+    width:100%;
+    height: 100vh;
+    padding: 10px;
+    display: none;
+    }
+    .nav-bar ul li {
+    padding:5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin:10px;
+    }
+    .footer{
+        display: none;
+    }
+
+}
