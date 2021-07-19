@@ -8,7 +8,7 @@
 <style type="text/css">
 	.box{
 		height: 200px;
-		width: 250px;
+		width: 200px;
 		border-radius: 20px;
 		border: 1px solid #ccc;
 		display: flex;
@@ -18,7 +18,7 @@
 	}
 	.container{
 		display: flex;
-		justify-content: space-between;
+		justify-content:space-between;
 		align-items: center;
 		font-size: 40px;
 	}
@@ -55,16 +55,31 @@
                         echo $row;
                     
                         ?>
-                        <h3>total product</h3>
+                        <h3>Total Product</h3>
 	</div>
 	<div class="box box2">
-		<p>0</p>
-		 <h3>total sales</h3>
+		 <?php
+                       include"database.inc.php";
+                        $query="select * from transaction";
+                        $data=mysqli_query($con,$query);
+                        $row=mysqli_num_rows($data);
+                        echo $row;
+                    
+                        ?>
+		 <h3>Total Sales</h3>
 	</div>
 	<div class="box box3">
-		<p>0</p>
-		<h3>stock</h3>
+		 <?php
+                       include"database.inc.php";
+                        $query="select * from customer";
+                        $data=mysqli_query($con,$query);
+                        $row=mysqli_num_rows($data);
+                        echo $row;
+                    
+                        ?>
+		 <h3>Total Customer</h3>
 	</div>
+	
 </div>
 </body>
 </html>

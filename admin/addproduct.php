@@ -2,13 +2,14 @@
 
 <?php
 include('database.inc.php');
+include('function.inc.php');
 if(isset($_POST["submit"]))
 {
-	$name=$_POST["name"];
-	$category=$_POST["cat"];
-	$desc=$_POST["desc"];
-	$rate=$_POST["rate"];
-	$qty=$_POST["qty"];
+	$name=htmlspecialchars($_POST["name"]);
+	$category=htmlspecialchars($_POST["cat"]);
+	$desc=htmlspecialchars($_POST["desc"]);
+	$rate=htmlspecialchars($_POST["rate"]);
+	$qty=htmlspecialchars($_POST["qty"]);
 	/*
 if(empty($_POST["name"]))
 {
@@ -61,6 +62,9 @@ if($data)
 	input-box{
     width:15rem;
     height: auto;
+}
+*{
+  text-transform: capitalize;
 }
 label{
     font-size: 18px;
@@ -119,19 +123,19 @@ label{
 }
 </style>
 <div class="row">
-			<h1 class="grid_title ml10 ml15">add product</h1>
+			<h1 class="grid_title ml10 ml15">Add Product</h1>
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
 
                   <form class="forms-sample" method="post">
                     <div class="form-group">
-                      <label for="exampleInputName1">product name</label>
+                      <label for="exampleInputName1">Product Name</label>
                       <input type="text" class="form-control" placeholder="name" name="name" required value="">
 					  
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputEmail3" required>product category</label>
+                      <label for="exampleInputEmail3" required>Product Category</label>
                       <select name="cat" class="form-control">
                       	<?php
                         include"database.inc.php";
@@ -150,18 +154,18 @@ label{
                       
                     </div>
                     <div class="form-group">
-                      <label for="exampleInputName1">product description</label>
+                      <label for="exampleInputName1">Product Description</label>
                       <textarea name="desc"class="form-control" ></textarea>
 					
                     </div>
                     <div class="form-group">
                       <label for="exampleInputName1">product rate</label>
-                      <input type="text" class="form-control" placeholder="rate" name="rate" required value="">
+                      <input type="number" class="form-control" placeholder="rate" name="rate" required value="">
 					 
                     </div>
                     <div class="form-group">
                       <label for="exampleInputName1">product qty</label>
-                      <input type="text" class="form-control" placeholder="qty" name="qty" required value="">
+                      <input type="number" class="form-control" placeholder="qty" name="qty" required value="">
 					
                     </div>
                     <input type="submit" class="btn btn-primary mr-2" name="submit">

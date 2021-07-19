@@ -1,10 +1,8 @@
 <?php
 session_start();
 include('database.inc.php');
-include('function.inc.php');
-
 if(!isset($_SESSION['users'])){
-	redirect('login.php');
+	header('location:login.php');
 }
 ?>
 <!DOCTYPE html>
@@ -13,10 +11,9 @@ if(!isset($_SESSION['users'])){
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>department store  Admin</title>
+  <title>Department Store  Admin</title>
 
-  <!-- plugins:css -->
-  <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
+ <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="assets/css/dataTables.bootstrap4.css">
   <!-- endinject -->
@@ -25,8 +22,13 @@ if(!isset($_SESSION['users'])){
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 </head>
+<style>
+*{
+  text-transform: capitalize;
+}
+</style>
 <body class="sidebar-light">
   <div class="container-scroller">
     <!-- partial:partials/_navbar.html -->
@@ -41,14 +43,14 @@ if(!isset($_SESSION['users'])){
           
         </ul>
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.php"><h1>department store</h1></a>
-          <a class="navbar-brand brand-logo-mini" href="index.php"><img src="assets/images/logo.png" alt="logo"/></a>
+          <a class="navbar-brand brand-logo" href="index.php"><h1>Department Store</h1></a>
+          <a class="navbar-brand brand-logo-mini" href="index.php" style="text-align:center;margin-left:200px;">Department store</a>
         </div>
         <ul class="navbar-nav navbar-nav-right">
           
           <li class="nav-item nav-profile dropdown">
             <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-              <span class="nav-profile-name">admin</span>
+              <span class="nav-profile-name"><i class="fas fa-user"></i>admin</span><i class="fas fa-user"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <div class="dropdown-divider"></div>
@@ -79,8 +81,8 @@ if(!isset($_SESSION['users'])){
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">
-              <i class="mdi mdi-view-quilt menu-icon"></i>
+            <a class="nav-link bg-primary text-white" href="index.php">
+              <i class="mdi mdi-view-quilt menu-icon text-white"></i>
               <span class="menu-title">Dashboard</span>
             </a>
           </li>
@@ -93,25 +95,25 @@ if(!isset($_SESSION['users'])){
            <li class="nav-item">
             <a class="nav-link" href="product.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
-              <span class="menu-title">product</span>
+              <span class="menu-title">Product</span>
             </a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="customer.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
-              <span class="menu-title">customer</span>
+              <span class="menu-title">Customar</span>
             </a>
           </li>
            <li class="nav-item">
-            <a class="nav-link" href="">
+            <a class="nav-link" href="employees.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
-              <span class="menu-title">purchase report</span>
+              <span class="menu-title">Employees</span>
             </a>
           </li>
-           <li class="nav-item">
-            <a class="nav-link" href="">
+                     <li class="nav-item">
+            <a class="nav-link" href="sellreport.php">
               <i class="mdi mdi-view-headline menu-icon"></i>
-              <span class="menu-title">sell report</span>
+              <span class="menu-title">Sell Report</span>
             </a>
           </li>
           
@@ -122,3 +124,4 @@ if(!isset($_SESSION['users'])){
       <!-- partial -->
       <div class="main-panel">
         <div class="content-wrapper">
+        

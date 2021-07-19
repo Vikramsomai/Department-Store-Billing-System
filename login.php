@@ -9,7 +9,7 @@ if(isset($_POST["login"]))
 
     if(mysqli_num_rows($data)>0)
     {
-  header('location:admin/index.php');
+       header('location:admin/index.php');
     }
   
 

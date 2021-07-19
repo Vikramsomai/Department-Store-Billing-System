@@ -1,4 +1,5 @@
 <?php
+include'header.php';
 session_start();
 include('database.inc.php');
 include('function.inc.php');
@@ -26,6 +27,7 @@ if(isset($_POST['submit'])){
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>department store Admin Login</title>
   <!-- plugins:css -->
@@ -37,6 +39,7 @@ if(isset($_POST['submit'])){
   <!-- End plugin css for this page -->
   <!-- inject:css -->
   <link rel="stylesheet" href="assets/css/style.css">
+  
 </head>
 <body class="sidebar-light">
   <div class="container-scroller">
@@ -46,9 +49,10 @@ if(isset($_POST['submit'])){
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left p-5">
               <div class="brand-logo text-center">
-               <h1>department store Admin login</h1>
+               <h1>Department Store Admin login</h1>
               </div>
               <h6 class="font-weight-light">Sign in to continue.</h6>
+              <div class="login_msg"><?php echo $msg?></div>
               <form class="pt-3" method="post">
                 <div class="form-group">
                   <input type="textbox" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username" name="username" required>
@@ -57,11 +61,11 @@ if(isset($_POST['submit'])){
                   <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password"  name="password" required>
                 </div>
                 <div class="mt-3">
-                  <input type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="SIGN IN" name="submit"/>
+                  <input type="submit" class="btn btn-block btn-danger btn-lg font-weight-medium auth-form-btn" value="SIGN IN" name="submit"/>
                 </div>
                 
               </form>
-			  <div class="login_msg"><?php echo $msg?></div>
+			  
             </div>
           </div>
         </div>

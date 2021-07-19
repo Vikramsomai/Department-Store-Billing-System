@@ -34,8 +34,10 @@
                         include"database.inc.php";
                         $query="select * from product";
                         $data=mysqli_query($con,$query);
+                        $i=0;
                         while($res=mysqli_fetch_assoc($data))
                         {
+                          $i++;
                         	$name=$res["product_name"];
                         	$id=$res["p_id"];
                         	$cat=$res["category"];
@@ -44,11 +46,11 @@
                         	$qty=$res["qty"];
                         	echo"
                             <tr>
-                            <td>$id</td>
+                            <td>$i</td>
                             <td>$name</td>
                             <td>$cat</td>
                             <td>$desc</td>
-                            <td>$rate</td>
+                            <td> &#8377; $rate </td>
                             <td>$qty</td>
                             <td><a href='editproduct.php?id=$id'class='btn btn-primary'>edit</a></td>
                             
